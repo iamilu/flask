@@ -1,0 +1,21 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title></title>
+  </head>
+  <body>
+      <form action='', method='POST'>
+        {{form.csrf_token}}
+        <div>
+        {{form.qauthor.label}} : {{form.qauthor}}<br><br>
+        {% for error in form.qauthor.errors %}
+          [{{error}}]<br><br>
+        {% endfor %}
+        {{form.qstring.label}} : {{form.qstring}}<br><br>
+        {% for error in form.qstring.errors %}
+          [{{error}}]<br><br>
+        {% endfor %}
+        {{form.submit}}
+  </body>
+  </html>
